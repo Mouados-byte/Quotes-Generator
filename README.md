@@ -22,16 +22,27 @@ The process is repeated until the generated quote reaches the specified length.
 
 # Customizing the generated quotes
 
-You can customize the generated quotes by modifying the parameters passed to the generateQuote() function. The function takes in 3 parameters:
+You can customize the generated quotes by modifying the parameters passed to the **generateQuote()** function. The function takes in 3 parameters:
 
-A string representing the starting word of the quote.
-An unordered map representing the markov chain.
-An int representing the maximum number of words in the generated quote.
-You can also add or remove quotes from the text file to change the output.
+- A string representing the starting word of the quote.
+- An unordered map representing the markov chain.
+- An int representing the maximum number of words in the generated quote.
 
 
 # Saving and loading the markov chain
 
-You can save the markov chain to a file by calling the outputTokensInFile() function and providing the desired output file and the markov chain as parameters.
+You can save the markov chain to a file by calling the **outputTokensInFile()** function and providing the desired output file and the markov chain as parameters.
 
-You can then load the markov chain from a file using the reverseMapFromFile() function, which takes an input file stream and returns the mark
+You can then load the markov chain from a file using the **reverseMapFromFile()** function, which takes an input file stream and returns the markov chain as an unordered map.
+
+# Limitations
+
+* The program currently only supports quotes in the format of "quote" and does not handle quotes within quotes or other forms of punctuation.
+* The program also assumes that all quotes in the input text file are separated by a newline character.
+
+# Future improvements
+
+* Add support for quotes in different formats and forms of punctuation
+* Implement a GUI for the program
+* Add the ability to input multiple text files and build a larger markov chain
+* Implement a way to specify the type of quote or source of the quotes to tailor the output.
